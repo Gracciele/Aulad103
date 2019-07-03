@@ -1,33 +1,80 @@
 body {
     display: grid;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     grid-template-areas: 'navbar navbar navbar navbar'
                         ' header header header header'
                         'section section section aside'
                         'footer footer footer footer';
+    grid-template-rows: 10vh 500px 60vh 15vh; 
+    grid-template-columns: 25vw 25vw 20vw 30vw;
+    /* grid-gap: 1vh; */
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space - remove a barra de rolagem no navegador */ 
+    background: transparent; /* Opcional: torna a scrollbar transparent; */
+}
+
 nav {
-    grid-area: navbar;
-    background-color: blue;
+    align-items: center;
+    background-color: #091a49;   
+    display: flex;
+    justify-content: space-between;
+    grid-area: navbar; 
+}
+
+nav div img {
+    margin-left: 20px;
+}
+
+nav div:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+a {
+    color: whitesmoke;
+    font-size: 22px;
+    text-decoration: none;
 }
 
 header {
     grid-area: header;
-    background-color: blueviolet;
+    background-color: #077ab1;
+    background-image: url("images/banner1.jpg");
+    background-size: cover;
 }
 
 section {
     grid-area: section;
-    background-color: tomato;
+    background-color:#4c84bd;
+}
+
+section h2 {
+    color: white;
+}
+section p {
+    color: white;
 }
 
 aside {
     grid-area: aside;
-    background-color: violet;
+    background-color:#07294c;
 }
 
+aside img {
+    height: 250px;
+}
+
+aside p {
+    font-size: 18pt;
+    margin: 0;
+    color: whitesmoke;
+    font-family: cursive;
+}
 footer {
     grid-area: footer;
-    background-color: coral;
+    background-color: #900c28;
 }
