@@ -1,2 +1,33 @@
+body {
+    display: grid;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                        ' header header header header'
+                        'section section section aside'
+                        'footer footer footer footer';
+    margin: 0;
+}
+
 nav {
-    justify-content: 
+    grid-area: navbar;
+    background-color: blue;
+}
+
+header {
+    grid-area: header;
+    background-color: blueviolet;
+}
+
+section {
+    grid-area: section;
+    background-color: tomato;
+}
+
+aside {
+    grid-area: aside;
+    background-color: violet;
+}
+
+footer {
+    grid-area: footer;
+    background-color: coral;
+}
